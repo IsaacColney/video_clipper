@@ -2,6 +2,7 @@ from asyncio import subprocess
 import glob
 import sys
 import subprocess
+from time import time
 
 def scan_file() -> list:
     path = sys.path[0]
@@ -28,10 +29,12 @@ def main():
     print("**********  Video trimmer  ********")
     trim_time_sec : str = str(input("Enter trim time (sec) : "))
     video_list = scan_file()
+    start_time = time()
     video_clipper_from_end(video_list , trim_time_sec)
+    stop_time = time()
     print("********* Video clip complete ***********")
+    print(f"Time elapsed : {round(stop_time - start_time,2)} seconds")
 
 #Programm entry point:
 if __name__ == "__main__":
     main()
-
