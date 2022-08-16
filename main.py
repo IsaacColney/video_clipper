@@ -32,4 +32,6 @@ def main():
     print("********* Video clip complete ***********")
 
 #Programm entry point:
-main()
+if __name__ == "__main__":
+    main()
+
