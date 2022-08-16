@@ -10,11 +10,18 @@ def scan_file() -> list:
         clip_list.append(file)
     return clip_list
 
-def video_clipper_from_end(video_list : list , trim_time : str):
+def output_path_generator(output_name : str , input_path : str) -> str:
+    path_in_list : list = input_path.split("\\")
+    path_in_list.pop()
+    path_in_list.append(output_name)
+    output_path : str = "\\".join(path_in_list)
+    return output_path
+
+def video_clipper_from_end(video_list : list[str] , trim_time : str):
     for video in video_list:
-        input_video : str = "video"
-        output_name : str = "./clipped"+ video.split("\\")[-1]
-        command = f'ffmpeg -sseof -{trim_time} -i "{video}" -c copy "{output_name}"'
+        output_name : str = "clipped"+ video.split("\\")[-1]
+        output_path : str = output_path_generator(output_name , video)
+        command = f'ffmpeg -sseof -{trim_time} -i "{video}" -c copy "{output_path}"'
         subprocess.run(command)
 
 def main():
