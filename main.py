@@ -19,7 +19,7 @@ def output_path_generator(output_name : str , input_path : str) -> str:
 
 def video_clipper_from_end(video_list : list[str] , trim_time : str):
     for video in video_list:
-        output_name : str = "clipped"+ video.split("\\")[-1]
+        output_name : str = trim_time+"_clipped_"+ video.split("\\")[-1]
         output_path : str = output_path_generator(output_name , video)
         command = f'ffmpeg -sseof -{trim_time} -i "{video}" -c copy "{output_path}"'
         subprocess.run(command)
