@@ -24,3 +24,5 @@
  - Using git : ``git clone https://github.com/IsaacColney/video_clipper``
  - Run the program on the same directory you want to trim the video from
 
+### Screenshot :
+![](/images/video_clipper-ss.png)
