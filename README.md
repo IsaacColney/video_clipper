@@ -17,6 +17,8 @@
   - ``python3 main.py``
   
  ### How to use gui video clipper:
- - Download file from /gui_tkinter/main.pyw 
+ - Download file from [/gui_tkinter/main.pyw](https://github.com/IsaacColney/video_clipper/tree/main/gui_tkinter) 
+ ##### or
+ - Using git : ``git clone https://github.com/IsaacColney/video_clipper/tree/main/gui_tkinter``
  - Run the program on the same directory you want to trim the video from
 
