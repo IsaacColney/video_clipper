@@ -1,5 +1,6 @@
 ### Video Clipper
 - The progam scan all the file that are in the same directory as the main and then clip video from the end of frame depending on the input time(second) given
+- The repository also contain gui support video clipper
 
 ### Requirement :
 - python : [Download Python](https://www.python.org/downloads/)
@@ -14,4 +15,8 @@
 - ##### Step 2:
   - Run main.py file from the same folder as the video you want to trim
   - ``python3 main.py``
+  
+ ### How to use gui video clipper:
+ - Download file from /gui_tkinter/main.pyw 
+ - Run the program on the same directory you want to trim the video from
 
